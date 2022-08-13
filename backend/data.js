@@ -54,7 +54,7 @@ const data = {
             countInStock: 10,
             rating: 4.5,
             numReviews: 10,
-            description: 'We finish all of your errands in no time',
+            description: 'Have a long to-do list? Let Taskers pick up your dry cleaning, take packages to the post office, pick up prescriptions, or do your shopping',
             serviceProvider: 'Stefany',
         },
         {
@@ -69,6 +69,19 @@ const data = {
             numReviews: 10,
             description: 'Send all you packages safely and quickly',
             serviceProvider: 'Stefany',
+        },
+        {
+            name: 'Home Cleaning',
+            // _id: '4',
+            slug: 'Cleaner', //what you see at URL
+            category: 'Cleaning',
+            image: '/images/4.jpg',
+            price: 20,
+            countInStock: 10,
+            rating: 4.5,
+            numReviews: 10,
+            description: 'Clean your home in no time',
+            serviceProvider: 'Alex',
         },
     ],
 
