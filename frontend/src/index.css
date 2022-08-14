@@ -171,7 +171,7 @@ h5 {
 }
 
 footer {
-  background-color: #253a47;
+  border-top: 2px solid #83a2b5;
   min-height: 130px;
   margin-top: 15px;
 }
@@ -250,4 +250,7 @@ ul li ul li {
   margin-left: 20px;
   text-align: center;
   
+}
+.text-end{
+  margin-top: 10px;
 }

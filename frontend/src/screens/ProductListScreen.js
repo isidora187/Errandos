@@ -26,14 +26,14 @@ const reducer = (state, action) => {
       return { ...state, loading: false, error: action.payload };
 
       case 'CREATE_REQUEST':
-      return { ...state, loadingCreate: true };
-    case 'CREATE_SUCCESS':
-      return {
-        ...state,
-        loadingCreate: false,
-      };
-    case 'CREATE_FAIL':
-      return { ...state, loadingCreate: false };
+        return { ...state, loadingCreate: true };
+      case 'CREATE_SUCCESS':
+        return {
+          ...state,
+          loadingCreate: false,
+        };
+      case 'CREATE_FAIL':
+        return { ...state, loadingCreate: false };
       case 'DELETE_REQUEST':
       return { ...state, loadingDelete: true, successDelete: false };
     case 'DELETE_SUCCESS':
@@ -94,28 +94,28 @@ export default function ProductListScreen() {
         fetchData();
       }
     }, [page, userInfo, successDelete]);
-  const createHandler = async () => {
-    if (window.confirm('Are you sure to create?')) {
-      try {
-        dispatch({ type: 'CREATE_REQUEST' });
-        const { data } = await axios.post(
-          '/api/products',
-          {},
-          {
-            headers: { Authorization: `Bearer ${userInfo.token}` },
-          }
-        );
-        toast.success('product created successfully');
-        dispatch({ type: 'CREATE_SUCCESS' });
-        navigate(`/admin/product/${data.product._id}`);
-      } catch (err) {
-        toast.error(getError(error));
-        dispatch({
-          type: 'CREATE_FAIL',
-        });
+    const createHandler = async () => {
+      if (window.confirm('Are you sure to create?')) {
+        try {
+          dispatch({ type: 'CREATE_REQUEST' });
+          const { data } = await axios.post(
+            '/api/products',
+            {},
+            {
+              headers: { Authorization: `Bearer ${userInfo.token}` },
+            }
+          );
+          toast.success('product created successfully');
+          dispatch({ type: 'CREATE_SUCCESS' });
+          navigate(`/admin/product/${data.product._id}`);
+        } catch (err) {
+          toast.error(getError(error));
+          dispatch({
+            type: 'CREATE_FAIL',
+          });
+        }
       }
-    }
-  };
+    };
   const deleteHandler = async (product) => {
     if (window.confirm('Are you sure to delete?')) {
       try {

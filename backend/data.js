@@ -20,7 +20,7 @@ const data = {
             name: 'Dog Walking',
            // _id: '1',
             slug: 'dog-walking', //what you see at URL
-            image: '/images/1.jpg',
+            image: '/images/2.jpg',
             category: 'Pets',
             description: 'Dog walking service when you dont habe time for your furry friends',
             price: 10,
@@ -36,7 +36,7 @@ const data = {
            // _id: '2',
             slug: 'grocery-shopping', //what you see at URL
             category: 'Shopping',
-            image: '/images/2.jpg',
+            image: '/images/1.jpg',
             price: 20,
             countInStock: 10,
             rating: 4.5,

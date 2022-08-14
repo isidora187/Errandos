@@ -16,14 +16,13 @@ productRouter.post(
     const newProduct = new Product({
       name: 'sample name ' + Date.now(),
       slug: 'sample-name-' + Date.now(),
-      
       image: '/images/p1.jpg',
-      price: 0,
+      price: 10,
       category: 'sample category',
-      brand: 'sample brand',
-      countInStock: 0,
-      rating: 0,
-      numReviews: 0,
+      serviceProvider: 'Alex',
+      countInStock: 10,
+      rating: 10,
+      numReviews: 10,
       description: 'sample description',
     });
     const product = await newProduct.save();
