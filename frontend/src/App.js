@@ -28,6 +28,7 @@ import SearchScreen from './screens/SearchScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './screens/DashboardScreen';
 import AdminRoute from './components/AdminRoute';
+import ServiceProviderRoute from './components/ServiceProviderRoute';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
@@ -140,6 +141,18 @@ function App() {
                       <LinkContainer to="/admin/users">
                         <NavDropdown.Item>Users</NavDropdown.Item>
                       </LinkContainer>
+                    </NavDropdown>
+                  )}
+                  {userInfo && userInfo.isProvider && (
+                    <NavDropdown title="Service-Provider" id="admin-nav-dropdown">
+                      
+                      <LinkContainer to="/admin/productlist">
+                        <NavDropdown.Item>Products</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/orderlist">
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                      </LinkContainer>
+                      
                     </NavDropdown>
                   )}
                 </Nav>
